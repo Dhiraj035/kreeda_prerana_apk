@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "689255097032",
+    "project_id": "kreeda-prerana-3cb15",
+    "storage_bucket": "kreeda-prerana-3cb15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689255097032:android:f96d334449140f81717bfd",
+        "android_client_info": {
+          "package_name": "com.example.kreedaprerana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689255097032-saarah0b2v4m92v2lplpeu05meqike3i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kreedaprerana",
+            "certificate_hash": "8dd9069007f757536c9214118fcc72b6f3be8cd1"
+          }
+        },
+        {
+          "client_id": "689255097032-r014mkq1c8k88spmttcg8gbrhor6p0oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjTmJ2Ibs7Fth6JZH_PrFil3UWUPrlRqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689255097032-r014mkq1c8k88spmttcg8gbrhor6p0oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

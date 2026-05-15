@@ -1,0 +1,72 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Running athlete silhouette (centered in 108x108 safe zone 24-84) -->
+    <group
+        android:translateX="28"
+        android:translateY="22">
+
+        <!-- Head -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,8 A5.5,5.5 0 1,1 30,19 A5.5,5.5 0 1,1 30,8z" />
+
+        <!-- Body / torso leaning forward -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M28,19 L24,42 L32,42 L34,19z"
+            android:strokeWidth="0"
+            android:strokeColor="#00000000" />
+
+        <!-- Left arm (back, extended) -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M30,24 L16,18"
+            android:strokeWidth="4"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round" />
+
+        <!-- Right arm (front, bent) -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M30,24 L40,30 L44,22"
+            android:strokeWidth="4"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+
+        <!-- Left leg (back, extended) -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M26,42 L14,54 L8,50"
+            android:strokeWidth="4.5"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+
+        <!-- Right leg (front, stepping) -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M30,42 L40,54 L46,58"
+            android:strokeWidth="4.5"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+
+    </group>
+
+    <!-- Rising star / spark -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M72,28 L74,33 L79,33 L75,36.5 L76.5,42 L72,38.5 L67.5,42 L69,36.5 L65,33 L70,33z" />
+
+    <!-- Small accent star -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:alpha="0.7"
+        android:pathData="M78,22 L79,24.5 L81.5,24.5 L79.5,26 L80.2,28.5 L78,27 L75.8,28.5 L76.5,26 L74.5,24.5 L77,24.5z" />
+
+</vector>

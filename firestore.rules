@@ -1,0 +1,42 @@
+rules_version = '2';
+
+// Firestore security rules for Kreeda-Prerana Scout
+// Enforcing Multi-Coach Data Isolation
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function to check if the user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Coaches can only read and write their own profile document
+    match /coaches/{userId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Athletes
+    match /athletes/{athleteId} {
+      allow read: if isAuthenticated() && resource.data.coachId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.coachId == request.auth.uid;
+      allow update: if isAuthenticated() && request.resource.data.coachId == request.auth.uid && resource.data.coachId == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.coachId == request.auth.uid;
+    }
+
+    // Performances
+    match /performances/{performanceId} {
+      allow read: if isAuthenticated() && resource.data.coachId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.coachId == request.auth.uid;
+      allow update: if isAuthenticated() && request.resource.data.coachId == request.auth.uid && resource.data.coachId == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.coachId == request.auth.uid;
+    }
+
+    // Badges
+    match /badges/{badgeId} {
+      allow read: if isAuthenticated() && resource.data.coachId == request.auth.uid;
+      allow create: if isAuthenticated() && request.resource.data.coachId == request.auth.uid;
+      allow update: if isAuthenticated() && request.resource.data.coachId == request.auth.uid && resource.data.coachId == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.coachId == request.auth.uid;
+    }
+  }
+}
